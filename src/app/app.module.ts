@@ -7,13 +7,15 @@ import { ShareModule } from './share/share.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ShareModule,
+
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
@@ -21,4 +23,5 @@ import { ShareModule } from './share/share.module';
 })
 export class AppModule { }
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
