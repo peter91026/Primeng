@@ -3,9 +3,19 @@ import { MenuItem } from 'primeng/api';
 const panelMenu: any[] = [
   //無下拉選單
   {
-    label: '表單',
+    label: '基本資料',
     icon: 'pi pi-fw pi-file-edit',
     routerLink: ['/form'],
+  },
+  {
+    label: '表單',
+    icon: 'pi pi-fw pi-file-edit',
+    routerLink: ['/survey'],
+  },
+  {
+    label: '表格',
+    icon: 'pi pi-fw pi-file-edit',
+    routerLink: ['/table'],
   },
   //有下拉選單(範例)
   {
