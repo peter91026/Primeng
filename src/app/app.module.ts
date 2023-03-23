@@ -9,6 +9,7 @@ import { ShareModule } from './share/share.module';
   declarations: [
     AppComponent,
     ToolbarComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,4 +25,5 @@ import { ShareModule } from './share/share.module';
 export class AppModule { }
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { FormComponent } from './form/form.component';
 
