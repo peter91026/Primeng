@@ -1,4 +1,5 @@
-<div class="div-container">
+<div class="container">
+
   <p-card>
     <h3>問卷</h3>
     <p-divider></p-divider>
@@ -16,30 +17,24 @@
         </div>
       </div>
       <div class="col-6">
-        <label>密碼</label>
-          <p-password>
-
-          </p-password>
-        </div>
-
-
-      <div class="col-6">
-
-        <div class="flex flex-column gap-2">
-          <div *ngFor="let category of categories" class="field-checkbox">
-            <p-checkbox name="group" [value]="category" [(ngModel)]="selectedCategories"
-              [inputId]="category.key"></p-checkbox>
-            <label [for]="category.key">{{ category.name }}</label>
-
-          </div>
+        <label for="inputPassword5" class="form-label">Password</label>
+        <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock">
+        <div id="passwordHelpBlock" class="form-text">
         </div>
       </div>
 
+      <div class="col-6 flex-center">
+        <p-checkbox [binary]="true" inputId="binary" label="angular"> </p-checkbox>
+        <p-checkbox [binary]="true" inputId="binary" label="golang"> </p-checkbox>
+        <p-checkbox [binary]="true" inputId="binary" label="sqlserve"> </p-checkbox>
+        <p-checkbox [binary]="true" inputId="binary" label="camunda"> </p-checkbox>
+      </div>
       <div class="col-6">
-        <label>確認密碼</label>
-          <p-password>
+        <label for="inputPassword5" class="form-label">EnterPassword</label>
+        <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock">
+        <div id="passwordHelpBlock" class="form-text">
 
-          </p-password>
+        </div>
       </div>
 
       <div class="col-6">
@@ -56,9 +51,47 @@
         </div>
       </div>
       <div class="col-6">
-        <p-multiSelect [options]="Profession" [(ngModel)]="selectedProfession" defaultLabel="職業" optionLabel="work"
-          display="chip"></p-multiSelect>
+        <div class="flex flex-column gap-2">
+          <label htmlFor="username">職業</label>
+          <p-dropdown [options]="Profession" optionLabel="work"></p-dropdown>
+        </div>
       </div>
+
+      <div class="col-6">
+        <label htmlFor="username">填寫日期</label>
+        <p-calendar [showIcon]="true"></p-calendar>
+      </div>
+
+      <div class="col-6">
+        <label>性別</label>
+        <div class="flex flex-wrap gap-3">
+          <div class="flex-center">
+            <div class="flex align-items-center">
+              <p-radioButton value="Cheese" [(ngModel)]="ingredient"></p-radioButton>
+              <label class="ml-2">男</label>
+            </div>
+
+            <div class="flex align-items-center">
+              <p-radioButton value="Mushroom" [(ngModel)]="ingredient"></p-radioButton>
+              <label class="ml-2">女</label>
+            </div>
+
+            <div class="flex align-items-center">
+              <p-radioButton value="Pepper" [(ngModel)]="ingredient"></p-radioButton>
+              <label class="ml-2">其他</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <label htmlFor="username">填寫評論</label>
+        <textarea rows="5" cols="50" pInputTextarea></textarea>
+      </div>
+
+      <div class="col-6">
+        <p-button label="送出"></p-button>
+      </div>
+
     </div>
   </p-card>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 interface student {
   position: number;
   name: string;
@@ -12,9 +13,13 @@ interface student {
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent {
-  Student: student[] = [];
+
+  visible: boolean=false;
+  human: student[] = [];
+  test:string='123'
+
   ngOninit(): void {
-    this.Student = [
+    this.human = [
       { position: 1, name: 'Rose', height: 178, weight: 43 },
       { position: 2, name: 'Benny', height: 156, weight: 90 },
       { position: 3, name: 'Sam', height: 167, weight: 55 },
@@ -31,4 +36,23 @@ export class TableComponent {
       { position: 14, name: 'Rita', height: 158, weight: 50 },
     ]
   }
+  data:any=[{
+    position:'',
+    name:'',
+    height:'',
+    weight:''
+  }]
+  showDialog(human:any) :void {
+    this.data=human;
+    console.log("data.position:"+JSON.stringify(this.data.position))
+    this.visible = true;
+    console.log("human"+JSON.stringify(human))
+}
+confirm():void{
+  this.visible=false
+  Swal.fire({
+    icon: 'success',
+    title: '儲存完畢',
+  })
+}
 }

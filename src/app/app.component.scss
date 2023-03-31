@@ -8,9 +8,41 @@ p-card {
   .p-card {
     border-radius: 10px;
   }
-  .p-button{
-    border-radius: 90px;
+
+  .button {
+    border-radius: 6px;
   }
+
+  .p-calendar {
+    max-width: 100%;
+    min-width: 100%;
+    border-radius: 6px;
+  }
+
+  .p-dropdown {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+}
+
+.p-button,
+.p-button {
+  margin-right: 5px;
+  border-radius: 6px;
+}
+
+
+.flex-center {
+  //上、右、下、左
+  // margin: 100px 5px 100px 5px;
+  display: flex; //自動將div變成flex的容器 會自動排版
+  align-items: center; //垂直置中
+}
+
+textarea {
+  width: 100%;
+  border-radius: 6px;
 }
 
 p-button,
@@ -41,17 +73,29 @@ h3 {
   width: 1200px;
   max-width: 100%;
 }
-.rudio-buttons{
-  display:flex;
-  flex-direction:row;
+
+.rudio-buttons {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   margin-top: 3%;
 }
-.p-checkbox{
-  display: flex;
-  flex-direction:row;
-  align-items: center;
-  margin-top: 8%;
+
+//:host ::ng-deep裡
+.p-dialog {
+  width: 40%;
+  height: 330px;
 }
 
-
+//對dt及dd元件進行樣式修改
+dt,
+dd {
+//去掉粗體
+font-weight: normal;
+//使dt與dd在同一行
+display: inline;
+//邊界設為0
+margin: 0;
+//字型大小
+font-size: 18px;
+}

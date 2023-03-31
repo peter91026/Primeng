@@ -30,6 +30,12 @@ export class SurveyComponent {
     ];
 
     }
+    CalendarIconDemo:[]=[];
+    date:Date[]=[];
+    radiobuttongroupdemo:[]=[];
+    ingredient:string[]=[];
+    InputTextareaBasicDemo:[]=[];
+    value: string[]=[];
   }
 
 
